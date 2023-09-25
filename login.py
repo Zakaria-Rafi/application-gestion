@@ -12,27 +12,25 @@ class login(customtkinter.CTk):
         customtkinter.set_default_color_theme("green")
 
         self.geometry("500x350")
-        self.title("Custom TK")
+        self.title("Se connecter")
         icon = PhotoImage(file='Photo/coins.png')
         self.iconphoto(False, icon)
 
         frame = customtkinter.CTkFrame(master=self)
         frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-        label = customtkinter.CTkLabel(master=frame, text="Login", font=("Roboto", 24))
+        label = customtkinter.CTkLabel(master=frame, text="Se connecter", font=("Roboto", 24))
         label.pack(pady=12, padx=10)
 
-        self.entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Username")
+        self.entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Nom d'utilisateur")
         self.entry1.pack(pady=12, padx=10)
 
-        self.entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="Password", show="*")
+        self.entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="Mot de passe", show="*")
         self.entry2.pack(pady=12, padx=10)
 
-        buttonlogin = customtkinter.CTkButton(master=frame, text="Login", command=self.login)
+        buttonlogin = customtkinter.CTkButton(master=frame, text="Se connecter", command=self.login)
         buttonlogin.pack(pady=12, padx=10)
 
-        checkbox = customtkinter.CTkCheckBox(master=frame, text="Remember Me")
-        checkbox.pack(pady=12, padx=10)
 
     def login(self):
         try:
